@@ -1,0 +1,79 @@
+.contenedorFooter {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10em;
+   }
+
+
+.arribaFooter {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10em; 
+    
+}
+
+.arribaIzquierdaFooter {
+    background-color: lightgreen;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 3em;
+    width: 20em;
+    margin-left: 2em;
+    border-radius: 2em 2em 2em 2em;
+    
+   }
+
+.arribaDerechaFooter {
+    background-color: lightgreen;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 3em;
+    width: 20em;
+    margin-left: 50em;
+    margin-right: 2em;
+    border-radius: 2em 2em 2em 2em;
+   }
+
+.abajoFooter {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10em; 
+    width: 100vw;
+}
+
+.caja1{
+    background-color: grey;
+    height: 3em;
+    width: 6em;
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: center;
+}
+
+.caja2{
+    background-color: grey;
+    height: 3em;
+    width: 6em;
+    margin-right: 2em;
+    text-align: center;
+}
+
+.caja3{
+    background-color: grey;
+    height: 3em;
+    width: 6em;
+    margin-right: 2em;
+    text-align: center;
+}
+

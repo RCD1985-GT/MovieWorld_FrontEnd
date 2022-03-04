@@ -1,0 +1,43 @@
+.contenedorHeader {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 5em;
+}
+
+.logo {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    width: 8em;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+
+.secciones {
+    background-color: lightgreen;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 3em;
+    width: 60em;
+    border-radius: 2em 2em 2em 2em;
+    /* text-decoration: none; porque no funciona */
+}
+
+.busqueda {
+    background-color: lightgreen;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 3em;
+    width: 30em;
+    margin-left: 15em;
+    margin-right: 2em;
+    border-radius: 2em 2em 2em 2em;
+}
