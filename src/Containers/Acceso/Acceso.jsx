@@ -1,4 +1,4 @@
-import React from "react"; 
+/*import React from "react"; 
 import './Acceso.css';
 
 const Acceso = () => {
@@ -13,15 +13,15 @@ const Acceso = () => {
     );
 };
 
-export default Acceso;
+export default Acceso;*/
 
-/* DAVID
+
 import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 
-import './Login.css';
+import './Acceso.css';
 
 const Login = () => {
 
@@ -113,7 +113,7 @@ const Login = () => {
 
     const takeMeRegister = () => {
         setTimeout(()=>{
-            navigate("/register");
+            navigate("/registro");
         },1000);
     }
 
@@ -122,22 +122,22 @@ const Login = () => {
 
     if(credenciales?.token !== undefined){
         return(
-            <div>Hola {credenciales?.usuario?.nombre}, bienvenido a Finder, 
-            donde ligar ya no es un milagro.</div>
+            <div>Hola {credenciales?.usuario?.nombre}, bienvenid@ a Movie World.</div>
         )
     } else {
          
         return(
             
-            <div className='designLogin'>
-                 {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>}
-                <div className="designFormulario">
+            <div className='diseñoAcceso'>
+                 {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
+                <div className="diseñoFormulario">
                     <input type="email" name="email" id="email" title="email" placeholder="Correo Electrónico" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="password" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e); checkPassword(e)}}/>
                     {msgError}
                     {msgError2}
+                    <button className='botonAcceder' onClick={()=>login()}>Acceder </button>
                 </div>
-                <div className="loginDesign espacio" onClick={()=>login()}>LOG ME!</div>
+                
                 En caso de no estar registrad@, HAZLO!!!!!!
                 <div className='designBotonHome' onClick={()=>takeMeRegister()}>
                     REGISTRATE...
@@ -150,4 +150,4 @@ const Login = () => {
 };
 
 
-export default Login;*/
+export default Login;

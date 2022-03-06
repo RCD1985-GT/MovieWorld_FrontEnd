@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 10em;
+    height: 15em;
     width: 100vw; 
    }
 
@@ -17,7 +17,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    height: 10em; 
+    height: 15em; 
     
 }
 
@@ -54,14 +54,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 10em; 
+    height: 15em; 
     width: 100vw;
 }
 
 .caja1{
     background-color: grey;
-    height: 3em;
-    width: 6em;
+    height: 10em;
+    width: 10em;
     margin-left: 2em;
     margin-right: 2em;
     text-align: center;
@@ -69,16 +69,16 @@
 
 .caja2{
     background-color: grey;
-    height: 3em;
-    width: 6em;
+    height: 10em;
+    width: 10em;
     margin-right: 2em;
     text-align: center;
 }
 
 .caja3{
     background-color: grey;
-    height: 3em;
-    width: 6em;
+    height: 10em;
+    width: 10em;
     margin-right: 2em;
     text-align: center;
 }
@@ -86,22 +86,22 @@
 /* ICONOS */
 
 .iconoFacebook {
-    background-color: black;
-    height: 2em;
-    width: 2em;
-    border-radius: 2em;
+    /* background-color: black; 
+    height: 5em;
+    width: 5em;
+    border-radius: 2em; */
 }
 
 .iconoInstagram {
-    background-color: black;
+    /* background-color: black;
     height: 2em;
     width: 2em;
-    border-radius: 2em;
+    border-radius: 2em; */
 }
 
 .iconoTwitter {
-    background-color: black;
+    /* background-color: black;
     height: 2em;
     width: 2em;
-    border-radius: 2em;
+    border-radius: 2em; */
 }

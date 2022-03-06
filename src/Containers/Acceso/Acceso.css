@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.formularioAcceso {
+.diseñoFormulario {
     height: 15em;
     width: 20em;
     background-color: lightgrey;
@@ -16,6 +16,14 @@
     align-items: center;
     justify-content: space-evenly;
     border-radius: 2em;
+}
 
-
+.botonAcceder {
+    height: 3em;
+    width: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 1em;
 }

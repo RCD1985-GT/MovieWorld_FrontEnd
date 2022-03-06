@@ -16,7 +16,7 @@ const Header = () => {
 		</div>
 
 		<div className="busqueda">
-			<div className="suscribete">Registrate</div>
+			<div className="suscribete">Registro</div>
 			<div className="lupa">Acceso</div>
 		</div>
 

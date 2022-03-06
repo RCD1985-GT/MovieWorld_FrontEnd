@@ -1,41 +1,41 @@
-import React from "react"; 
-import './Registro.css';
+// import React from "react"; 
+// import './Registro.css';
 
-const Registro = () => {
-    return(
-        <div className="diseñoRegistro">
-            <p><b><u>Rellene todos los datos para darse de alta como usuario</u></b></p>
-            <div className="formularioRegistro">
-                <form className="contenidoFormularioRegistro" action="" method="post">
-                    <label for="Nombre">Nombre</label>
-                        <input type="text" placeholder="Escribe aqui tu nombre"/>
-                    <label for="Apellido">Apellido</label>
-                        <input type="text" placeholder="Escibe aqui tu apellido"/>
-                    <label for="Email">Email</label>
-                        <input type="email" placeholder="EScribe aqui tu email"/>
-                    <label for="Edad">Edad</label>
-                        <input type="text" placeholder="Escribe aqui tuedad"/>
-                    <label for="Contraseña">Contraseña</label>
-                <       input type="password" placeholder="Escribe aqui tu contraseña"/>
-                <button><b>Registrarse</b></button>
-                </form>
-            </div>
+// const Registro = () => {
+//     return(
+//         <div className="diseñoRegistro">
+//             <p><b><u>Rellene todos los datos para darse de alta como usuario</u></b></p>
+//             <div className="formularioRegistro">
+//                 <form className="contenidoFormularioRegistro" action="" method="post">
+//                     <label for="Nombre">Nombre</label>
+//                         <input type="text" placeholder="Escribe aqui tu nombre"/>
+//                     <label for="Apellido">Apellido</label>
+//                         <input type="text" placeholder="Escibe aqui tu apellido"/>
+//                     <label for="Email">Email</label>
+//                         <input type="email" placeholder="EScribe aqui tu email"/>
+//                     <label for="Edad">Edad</label>
+//                         <input type="text" placeholder="Escribe aqui tuedad"/>
+//                     <label for="Contraseña">Contraseña</label>
+//                 <       input type="password" placeholder="Escribe aqui tu contraseña"/>
+//                 <button><b>Registrarse</b></button>
+//                 </form>
+//             </div>
 
-        </div>
-    );
-};
+//         </div>
+//     );
+// };
 
-export default Registro;
+// export default Registro;
 
 
-/* DAVID
+
 import React, {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import {checkError} from '../../utiles';
-import './Register.css';
+import './Registro.css';
 
-const Register = () => {
+const Register = () => {  // cambiar a Registro?
 
     let navigate = useNavigate();
 
@@ -43,10 +43,8 @@ const Register = () => {
     //Hooks
 
     const [datosUsuario, setDatosUsuario] = useState({
-            nombre: "", apellido: "", edad: "", email: "", 
-            dni: "", password: "", password2: "", telefono: "", 
-            numCuenta: ""
-    });
+            nombre: "", apellido: "", edad: "", email: "", password: "", password2: "" 
+        });
 
     const [msgError, setMsgError] = useState("");
 
@@ -111,12 +109,10 @@ const Register = () => {
         let body = {
             nombre: datosUsuario.nombre,
             apellido: datosUsuario.apellido,
-            edad: datosUsuario.edad,
             email: datosUsuario.email,
-            dni: datosUsuario.dni,
+            edad: datosUsuario.edad,
             password: datosUsuario.password,
-            telefono: parseInt(datosUsuario.telefono),
-            numCuenta: datosUsuario.numCuenta
+            
         }
 
         console.log("le llaman BODY", body);
@@ -124,11 +120,11 @@ const Register = () => {
 
         try {
             
-            let resultado = await axios.post("https://movie-db-geekshubs.herokuapp.com/usuarios", body);
+            let resultado = await axios.post("https://movie-db-geekshubs.herokuapp.com/usuarios", body); // cambiar url?
             console.log(resultado);
             
                 setTimeout(()=>{
-                    navigate("/login");
+                    navigate("/acceso");
                 },1000);
             
             
@@ -140,26 +136,25 @@ const Register = () => {
     }
 
     return(
-        <div className='designRegister'>
+        <div className='diseñoRegistro'>
              
-            <div className="cardRegister">
-                <div className="upCardRegister">Formulario de Registro</div>
-                <div className="middleCardRegister">
-                    {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>}
+            <div className="diseñoFormularioRegistro">
+                <div className="arribaRegistro">Formulario de Registro</div>
+                <div className="medioRegistro">
+                    {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
                     <input type="text" name="nombre" id="nombre" title="nombre" placeholder="Nombre:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="text" name="apellido" id="apellido" title="apellido" placeholder="Apellido:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input type="text" name="edad" id="edad" title="edad" placeholder="Edad:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="email" name="email" id="email" title="email" placeholder="Correo Electrónico:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input type="text" name="dni" id="dni" title="dni" placeholder="DNI" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input type="text" name="edad" id="edad" title="edad" placeholder="Edad:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>               
                     <input type="password" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="password" name="password2" id="password2" title="password2" placeholder="Repite contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input type="text" name="telefono" id="telefono" title="telefono" placeholder="Telefono" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input type="text" name="numCuenta" id="numCuenta" title="numCuenta" placeholder="NºCuenta" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    
+                    
                 </div>
-                <div className="bottomCardRegister">
+                <div className="abajoRegistro">
                     {msgError}
                     <div className="botonRegistro" onClick={()=>registrame()}>
-                        Register me!
+                        Registrarme
                     </div>
                 </div>
             </div>
@@ -168,4 +163,4 @@ const Register = () => {
 
 }
 
-export default Register;*/
+export default Register; // cambiar a Registro?
