@@ -2,4 +2,23 @@
     height: 100vh;
     width: 100vw;
     background-color: rgb(72, 72, 209);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.contenidoFormularioRegistro {
+    height: 30em;
+    width: 20em;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 2em;
+
 }
