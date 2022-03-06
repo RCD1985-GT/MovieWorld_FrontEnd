@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-
+// import Link from '../../Components/Link/Link';
 
 const Header = () => {
 	return(
@@ -16,8 +16,8 @@ const Header = () => {
 		</div>
 
 		<div className="busqueda">
-			<div className="suscribete">Suscribete</div>
-			<div className="lupa">Entra</div>
+			<div className="suscribete">Registrate</div>
+			<div className="lupa">Acceso</div>
 		</div>
 
 		  

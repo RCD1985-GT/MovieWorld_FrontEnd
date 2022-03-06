@@ -1,0 +1,10 @@
+.diseñoLink {
+    cursor: pointer;
+    height: 2em;
+    width: 4em;
+    border: 1ps solid black;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
