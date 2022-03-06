@@ -9,15 +9,15 @@ const Header = () => {
 		<div className="logo">Movie World</div>
 
         <div className="secciones">
-			<a href="#">Inicio</a>
+			<a href="#">Home</a>
 			<a href="#">Peliculas</a>
-			<a href="#">Series</a>
-			<a href="#">Kids</a>
+			<a href="#">Top 20</a>
+			<a href="#">Novedades</a>
 		</div>
 
 		<div className="busqueda">
 			<div className="suscribete">Suscribete</div>
-			<div className="lupa">Login</div>
+			<div className="lupa">Entra</div>
 		</div>
 
 		  
