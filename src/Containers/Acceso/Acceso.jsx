@@ -91,7 +91,7 @@ const Login = () => {
                  password: datosUsuario.password
             }
 
-            let resultado = await axios.post("https://movie-db-geekshubs.herokuapp.com/usuarios/login",body);
+            let resultado = await axios.post("https://movie-db-geekshubs.herokuapp.com/usuarios/login",body); //cambiar
 
             //Cambiamos el valor del hook credenciales, por lo tanto se recargará el componente
             if(resultado.data === "Usuario o contraseña inválido"){
@@ -136,12 +136,13 @@ const Login = () => {
                     {msgError}
                     {msgError2}
                     <button className='botonAcceder' onClick={()=>login()}>Acceder </button>
+                    <div className='botonNoRegistrado' onClick={()=>takeMeRegister()}>
+                    <u>¿ Aún no estas registrado ?</u>
+                    </div>
                 </div>
                 
-                En caso de no estar registrad@, HAZLO!!!!!!
-                <div className='designBotonHome' onClick={()=>takeMeRegister()}>
-                    REGISTRATE...
-                </div>
+                
+                
             </div>
         );
     }

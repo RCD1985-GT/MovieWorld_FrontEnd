@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-
+// import gc from '.assets/img/gc.png';
 
 const Footer = () => {
 	return(
@@ -17,10 +17,10 @@ const Footer = () => {
 
 			<div className="arribaDerechaFooter">
 				<div className="iconoFacebook">
-					<img src="src/assets/img/logoFacebookPeq" alt="" /> FB 
+					{/* <img src={gc}/>   */}
 				</div> 
 				<div className="iconoInstagram">
-					<img src="src/assets/img/logoFacebookPeq" alt="" />IS
+					<img src=".img/logoFacebookPeq" alt="facebook"/>IS
 				</div>
 				<div className="iconoTwitter">
 					<img src="src/assets/img/logoFacebookPeq" alt="" /> TW
@@ -31,7 +31,7 @@ const Footer = () => {
 
 		<div className="abajoFooter">
 			  <div className="caja1">
-				  <img src='src/assets/img/ue'></img>
+				  <img src='.img/gc'></img>
 			  </div>
 			  <div className="caja2">
 			  <img src='src/assets/img/ge'></img>

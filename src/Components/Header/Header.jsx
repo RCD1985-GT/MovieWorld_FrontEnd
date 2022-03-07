@@ -1,9 +1,10 @@
 import React from 'react';
 import './Header.css';
-// import Link from '../../Components/Link/Link';
+import Link from '../../Components/Link/Link';
 
 const Header = () => {
-	return(
+
+		return(
 	  <div className="contenedorHeader">
 
 		<div className="logo">Movie World</div>

@@ -1,0 +1,110 @@
+.diseñoPeliculas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: lightseagreen;
+}
+.carruselAccion {
+    height: 20em;
+    width: 90%;
+    border: 1px solid red;
+}
+
+.carruselAnimacion {
+    height: 20em;
+    width: 90%;
+    border: 1px solid red;}
+
+.carruselBelico {
+    height: 20em;
+    width: 90%;
+    border: 1px solid red;
+}
+
+.carruselCienciaFiccion {
+    height: 20em;
+    width: 90%;
+    border: 1px solid red;
+}
+
+.carruselClasicos {
+    height: 20em;
+    width: 90%;
+    border: 1px solid red;
+}
+
+.carruselComedia {
+    height: 20em;
+    width: 90%;
+    border: 1px solid red;
+}
+
+.carruselDocumental {
+    height: 20em;
+    width: 90%;
+    border: 1px solid red;
+}
+
+.carruselDrama {
+    height: 20em;
+    width: 90%;
+    border: 1px solid red;
+}
+
+.carruselInfantil {
+    height: 20em;
+    width: 90%;
+    border: 1px solid red;
+}
+
+.carruselMusical {
+    height: 20em;
+    width: 90%;
+    border: 1px solid red;
+}
+
+.carruselRomantica {
+    height: 20em;
+    width: 90%;
+    border: 1px solid red;
+}
+
+.carruselTerror {
+    height: 20em;
+    width: 90%;
+    border: 1px solid red;
+}
+
+.carruselThriller {
+    height: 20em;
+    width: 90%;
+    border: 1px solid red;
+}
+
+.carruselWestern {
+    height: 20em;
+    width: 90%;
+    border: 1px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
