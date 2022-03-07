@@ -1,0 +1,47 @@
+
+.diseñoTop20 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100em;
+    width: 100vw;
+    background-color: lightseagreen;
+}
+
+.contenedorTop20 {
+    height: 100em;
+    width: 90%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1em;
+}
+
+.contenedor1-5 {
+    height: 25em;
+    width: 100%;
+    border: 1px solid red;
+    margin-top: 3em;
+}
+
+.contenedor6-10 {
+    height: 25em;
+    width: 100%;
+    border: 1px solid red;
+}
+
+.contenedor11-15 {
+    height: 25em;
+    width: 100%;
+    border: 1px solid red;
+}
+
+.contenedor16-20 {
+    height: 25em;
+    width: 100%;
+    border: 1px solid red;
+    margin-bottom: 3em;
+}
