@@ -10,9 +10,9 @@ const Home = () => {
         <div className='diseñoHome'>
             <Link destino={"Registro"} url={"/registro"}/>
             <Link destino={"Acceso"} url={"/acceso"}/>
-             <div className="contenedorInfoGeneros"> 
+             <div className="contenedorInfo"> 
                 <div className='infoGeneros'>
-                <b>Elige tu género favorito y disfruta de la experiencia Movie World</b>
+                <b>Bienvenido a Movie World</b>
                 </div>
             </div>
             <div className="contenedorGeneros">

@@ -1,24 +1,43 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 import './Header.css';
-import Link from '../../Components/Link/Link';
+
+
 
 const Header = () => {
 
-		return(
+	let navigate = useNavigate();
+
+	const navegar = (lugar) => {
+
+		console.log("me meto aqui");
+
+        setTimeout(() => {
+            navigate(lugar);
+        }, 200);
+
+    }
+
+
+
+return(
+	
 	  <div className="contenedorHeader">
 
-		<div className="logo">Movie World</div>
+		<div className="logo" onClick={()=>navegar("/")}><b>Movie World</b></div>
 
         <div className="secciones">
-			<a href="#">Home</a>
-			<a href="#">Peliculas</a>
-			<a href="#">Top 20</a>
-			<a href="#">Novedades</a>
+			<p className='textoSecciones' onClick={()=>navegar("/peliculas")}>Peliculas</p>
+			<p className='textoSecciones' onClick={()=>navegar("/top20")}>Top20</p>
+			<p className='textoSecciones' onClick={()=>navegar("/novedades")}>Novedades</p>
+
 		</div>
 
-		<div className="busqueda">
-			<div className="suscribete">Registro</div>
-			<div className="lupa">Acceso</div>
+		<div className="entrar">
+			<div className="registro" onClick={()=>navegar("/registro")}>Registro</div> 
+			
+			<div className="acceso" onClick={()=>navegar("/acceso")} >Acceso</div>
+			
 		</div>
 
 		  

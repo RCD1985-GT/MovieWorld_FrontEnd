@@ -3,25 +3,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    height: 100vh;
+    height: 100em;
     width: 100vw;
-
-    background-color: lightseagreen;
+    background-color: #060613;
+ 
 }
 
-.contenedorInfoGeneros {
-    height: 5em;
+.contenedorInfo {
+    height: 40em;
     width: 100%;
     background-color: yellow;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url(../../img/fondoVideoclub.png);  
+    background-repeat: no-repeat;
+    background-image: center;
 }
 
 .infoGeneros {
     height: 2em;
-    width: 50em;
+    width: 15em;
     background-color: lightgreen;
     display: flex;
     align-items: center;
@@ -38,8 +40,7 @@
     justify-content: center;
     margin-top: 2em;
     margin-bottom: 2em;
-    margin-right: 1em;
-    margin-left: 1em;
+    margin-right: 2em;
     row-gap: 1em;
    }
 
@@ -49,49 +50,54 @@
 .bloque1Generos{
     height: 25%;
     width: 100%;
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     column-gap: 1em;
+    cursor: pointer;
+    color: antiquewhite;
 }
 
 .bloque1Generos1 {
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 3px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 }
 
 
 .bloque1Generos2 {
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 3px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 } 
 
 .bloque1Generos3 { 
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 3px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 } 
 
 .bloque1Generos4 {
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 3px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 }
 
 
@@ -100,7 +106,6 @@
 .bloque2Generos{
     height: 25%;
     width: 100%;
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -109,43 +114,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    color: antiquewhite;
 }
 
 .bloque2Generos1 {
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 3px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 }
 
 
 .bloque2Generos2 {
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 3px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 }
 
 .bloque2Generos3 {
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 2px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 }
 
 .bloque2Generos4 {
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 3px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 }
 
 /* BLOQUE 3 */
@@ -153,49 +164,54 @@
 .bloque3Generos{
     height: 25%;
     width: 100%;
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     column-gap: 1em;
+    cursor: pointer;
+    color: antiquewhite;
 }
 
 .bloque3Generos1 {
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 3px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 }
 
 
 .bloque3Generos2 {
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 3px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 }
 
 .bloque3Generos3 {
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 3px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 }
 
 .bloque3Generos4 {
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 3px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 }
 
 /* BLOQUE 4 */
@@ -203,50 +219,55 @@
 .bloque4Generos{
     height: 25%;
     width: 100%;
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     column-gap: 1em;
+    cursor: pointer;
+    color: antiquewhite;
 }
 
 .bloque4Generos1 {
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 3px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 }
 
 
 .bloque4Generos2 {
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 2px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 }
 
 .bloque4Generos3 {
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 2px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 }
 
 .bloque4Generos4 {
     height: 100%;
     width: 25%;
-    border: 2px solid red;
+    border: 2px solid whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1em;
 }

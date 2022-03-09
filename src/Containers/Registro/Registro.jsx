@@ -1,44 +1,13 @@
-// import React from "react"; 
-// import './Registro.css';
-
-// const Registro = () => {
-//     return(
-//         <div className="diseñoRegistro">
-//             <p><b><u>Rellene todos los datos para darse de alta como usuario</u></b></p>
-//             <div className="formularioRegistro">
-//                 <form className="contenidoFormularioRegistro" action="" method="post">
-//                     <label for="Nombre">Nombre</label>
-//                         <input type="text" placeholder="Escribe aqui tu nombre"/>
-//                     <label for="Apellido">Apellido</label>
-//                         <input type="text" placeholder="Escibe aqui tu apellido"/>
-//                     <label for="Email">Email</label>
-//                         <input type="email" placeholder="EScribe aqui tu email"/>
-//                     <label for="Edad">Edad</label>
-//                         <input type="text" placeholder="Escribe aqui tuedad"/>
-//                     <label for="Contraseña">Contraseña</label>
-//                 <       input type="password" placeholder="Escribe aqui tu contraseña"/>
-//                 <button><b>Registrarse</b></button>
-//                 </form>
-//             </div>
-
-//         </div>
-//     );
-// };
-
-// export default Registro;
-
-
-
 import React, {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import {checkError} from '../../utiles';
 import './Registro.css';
 
+
 const Register = () => {  // cambiar a Registro?
 
     let navigate = useNavigate();
-
     
     //Hooks
 
@@ -120,7 +89,7 @@ const Register = () => {  // cambiar a Registro?
 
         try {
             
-            let resultado = await axios.post("https://movie-db-geekshubs.herokuapp.com/usuarios", body); // cambiar url?
+            let resultado = await axios.post("http://localhost:3300/usuarios/registro", body); 
             console.log(resultado);
             
                 setTimeout(()=>{

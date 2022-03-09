@@ -1,21 +1,3 @@
-/*import React from "react"; 
-import './Acceso.css';
-
-const Acceso = () => {
-    return(
-        <div className="diseñoAcceso">
-          <div className="formularioAcceso">
-            <input type="text" placeholder="Usuario" />
-            <input type="password" placeholder="Contraseña"/>
-            <button><b>Acceder</b></button>
-          </div>
-        </div>
-    );
-};
-
-export default Acceso;*/
-
-
 import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -27,6 +9,8 @@ const Login = () => {
 
     let navigate = useNavigate();
 
+    
+   
     //1-Hooks (equivalen al estado en los componentes de clase)
     const [credenciales, setCredenciales] = useState("");
     const [datosUsuario, setDatosUsuario] = useState({email: "", password: ""});
@@ -85,15 +69,14 @@ const Login = () => {
 
         try {
 
-            //Me invento las credenciales
             let body = {
                  email: datosUsuario.email,
                  password: datosUsuario.password
             }
 
-            let resultado = await axios.post("https://movie-db-geekshubs.herokuapp.com/usuarios/login",body); //cambiar
+            let resultado = await axios.post("http://localhost:3300/usuarios/login",body); //cambiar
 
-            //Cambiamos el valor del hook credenciales, por lo tanto se recargará el componente
+            
             if(resultado.data === "Usuario o contraseña inválido"){
                 setMsgError2("Usuario o contraseña inválido")
             }else{
