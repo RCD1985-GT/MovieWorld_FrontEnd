@@ -3,96 +3,37 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 300em;
+    height: 100vh;
     width: 100vw;
     background-color: #060613;
 }
-.carruselAccion {
-    height: 20em;
-    width: 90%;
-    border: 1px solid red;
+
+.contenedorPeliculas {
+    height: 100vh;
+    width: 100vw;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1em;
 }
 
-.carruselAnimacion {
-    height: 20em;
-    width: 90%;
-    border: 1px solid red;}
-
-.carruselBelico {
-    height: 20em;
-    width: 90%;
-    border: 1px solid red;
+.item {
+    height: 10em;
+    width: 10em;
+    background-color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
-.carruselCienciaFiccion {
-    height: 20em;
-    width: 90%;
-    border: 1px solid red;
+.contenidoPeliculas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1em;
 }
-
-.carruselClasicos {
-    height: 20em;
-    width: 90%;
-    border: 1px solid red;
-}
-
-.carruselComedia {
-    height: 20em;
-    width: 90%;
-    border: 1px solid red;
-}
-
-.carruselDocumental {
-    height: 20em;
-    width: 90%;
-    border: 1px solid red;
-}
-
-.carruselDrama {
-    height: 20em;
-    width: 90%;
-    border: 1px solid red;
-}
-
-.carruselInfantil {
-    height: 20em;
-    width: 90%;
-    border: 1px solid red;
-}
-
-.carruselMusical {
-    height: 20em;
-    width: 90%;
-    border: 1px solid red;
-}
-
-.carruselRomantica {
-    height: 20em;
-    width: 90%;
-    border: 1px solid red;
-}
-
-.carruselTerror {
-    height: 20em;
-    width: 90%;
-    border: 1px solid red;
-}
-
-.carruselThriller {
-    height: 20em;
-    width: 90%;
-    border: 1px solid red;
-}
-
-.carruselWestern {
-    height: 20em;
-    width: 90%;
-    border: 1px solid red;
-}
-
-
-
-
 
 
 

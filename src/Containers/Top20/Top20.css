@@ -1,47 +1,39 @@
-
 .diseñoTop20 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    height: 100em;
+    height: 100vh;
     width: 100vw;
     background-color: #060613;
 }
 
 .contenedorTop20 {
-    height: 100em;
-    width: 90%;
-    /* border: 1px solid red; */
+    height: 100vh;
+    width: 100vw;
+    background-color: lightgray;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    row-gap: 1em;
+    justify-content: center;
+    column-gap: 1em;
 }
 
-.contenedor1-5 {
-    height: 25em;
-    width: 100%;
-    border: 1px solid red;
-    margin-top: 3em;
+.item {
+    height: 10em;
+    width: 10em;
+    background-color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
-.contenedor6-10 {
-    height: 25em;
-    width: 100%;
-    border: 1px solid red;
+.contenidoTop20 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1em;
 }
 
-.contenedor11-15 {
-    height: 25em;
-    width: 100%;
-    border: 1px solid red;
-}
 
-.contenedor16-20 {
-    height: 25em;
-    width: 100%;
-    border: 1px solid red;
-    margin-bottom: 3em;
-}
+

@@ -74,7 +74,7 @@ const Login = () => {
                  password: datosUsuario.password
             }
 
-            let resultado = await axios.post("http://localhost:3300/usuarios/login",body); //cambiar
+            let resultado = await axios.post("http://localhost:3300/usuarios/login",body); 
 
             
             if(resultado.data === "Usuario o contraseña inválido"){

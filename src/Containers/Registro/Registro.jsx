@@ -5,7 +5,7 @@ import {checkError} from '../../utiles';
 import './Registro.css';
 
 
-const Register = () => {  // cambiar a Registro?
+const Registro = () => {  // cambiar a Registro?
 
     let navigate = useNavigate();
     
@@ -132,4 +132,4 @@ const Register = () => {  // cambiar a Registro?
 
 }
 
-export default Register; // cambiar a Registro?
+export default Registro; // cambiar a Registro?
