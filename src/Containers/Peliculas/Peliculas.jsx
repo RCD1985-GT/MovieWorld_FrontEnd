@@ -29,7 +29,7 @@ const Peliculas = () => {
 
         try {
 
-            let resultado = await axios.get("http://localhost:3300/peliculas/peliculas");
+            let resultado = await axios.get("http://localhost:3300/peliculas");
 
             setPeliculas(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
 
@@ -43,6 +43,7 @@ const Peliculas = () => {
         // aqui mapeo porque ya las tengo
 
         return (
+
             <div className="contenidoPeliculas">
 
                 {peliculas.map(item => {

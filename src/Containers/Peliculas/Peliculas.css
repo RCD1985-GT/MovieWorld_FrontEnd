@@ -36,12 +36,15 @@
 }
 
 
+/* .contenidoPeliculas>:nth-child(2n) {
+    margin-left: 80em;
+    
+}
 
-
-
-
-
-
+.contenidoPeliculas>*{
+    flex-basis: 35%;
+}
+ */
 
 
 

@@ -5,13 +5,15 @@
 
 // const Genero = (props) => {
 
-//     const traePelis = async () => {
+    // const traePelis = async () => {
         
+    // const [peliculas, setPeliculas] = useState([])
+
 //             try {
 
 //             let resultado = await axios.get("http://localhost:3300/peliculas/:genero");
                 
-//             setFilms(resultado.data);
+//             setPeliculas(resultado.data);
            
 
 //         } catch (error) {

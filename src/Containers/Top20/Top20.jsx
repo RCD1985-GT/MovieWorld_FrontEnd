@@ -20,14 +20,15 @@ const Top20 = () => {
 
     });
 
-
     // Funcion traer peliculas
 
     const traeTop20 = async () => {
 
         try {
-            let resultado = await axios.get("http://localhost:3300/peliculas/peliculas");
+            let resultado = await axios.get("http://localhost:3300/peliculas/top20");
+            console.log(resultado)
             setTop20(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
+
         } catch (error) {
             console.log(error);
         }
@@ -56,7 +57,7 @@ const Top20 = () => {
         return (
             <div className="diseñoTop20">
                 <div className="contenedorTop20">
-                    hola soy Top20
+                NO SE HA CARGADO LA PAGINA TOP20
                 </div>
             </div>
         );
@@ -66,3 +67,4 @@ const Top20 = () => {
 };
 
 export default Top20;
+
