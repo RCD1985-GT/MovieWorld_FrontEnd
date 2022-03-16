@@ -10,7 +10,7 @@ const Header = () => {
 
 	const navegar = (lugar) => {
 
-		console.log("me meto aqui");
+		console.log("me meto aqui"); // mirar esto
 
         setTimeout(() => {
             navigate(lugar);

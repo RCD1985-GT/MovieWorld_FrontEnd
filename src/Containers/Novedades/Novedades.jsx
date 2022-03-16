@@ -41,11 +41,12 @@ const Novedades = () => {
                 {novedades.map(item => {
 
                     return (
-                        <div className="item" key={item.id} >
-
+                        <div className="itemNovedades" key={item.id} >
+                            <img src={item.poster} alt={item.id}/>
                             <p>{item.titulo}</p>
-                            <p>{item.año}</p>
-                            <p>{item.genero}</p>
+                            {/* <p>{item.año}</p>
+                            <p>{item.genero}</p> */}
+                          
                         </div>
                     )
                 })

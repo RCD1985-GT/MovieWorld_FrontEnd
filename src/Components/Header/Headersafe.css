@@ -4,17 +4,12 @@
     background-color: #060613;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 5em;
     font-size: 17px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 1em;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    
-
+    width: 100vw;
+   
 }
 
 .logo {
@@ -23,7 +18,7 @@
     justify-content: center;
     align-items: center;
     height: 3em;
-    width: 7em;
+    width: 10em;
     border-radius: 1em;
     border: 5px solid lightgreen;
     color: lightgreen;
@@ -37,11 +32,10 @@
     justify-content: space-around;
     align-items: center;
     height: 3em;
-    width: 25em;
+    width: 55em;
     border-radius: 1em;
     cursor: pointer;
     border: 5px solid whitesmoke;
-    margin-right: 35em;
    }
 
 .textoSecciones {
@@ -58,7 +52,7 @@
     justify-content: space-around;
     align-items: center;
     height: 3em;
-    width: 15em;
+    width: 30em;
     border-radius: 1em;
     cursor: pointer;
     border: 5px solid whitesmoke;

@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from "react";
 import './Peliculas.css';
 import axios from 'axios';
-
+import DetallesPelicula from "../DetallesPelicula/DetallesPelicula";
+import {useNavigate} from 'react-router-dom';
 
 
 
 const Peliculas = () => {
+
+
+    // Navegar
+
+    let navigate = useNavigate();
+
+	const navegar = () => {
+		navigate("/detalles");
+    }
+
 
     // Hook
     const [peliculas, setPeliculas] = useState([]);
@@ -50,10 +61,13 @@ const Peliculas = () => {
 
                     return (
 
-                        <div className="item" key={item.id} >
+                        <div className="itemPeliculas" key={item.id} onClick={()=>navegar("/detalles")} >
+                            <img src={item.poster} alt={item.id}/>
                             <p>{item.titulo}</p>
-                            <p>{item.año}</p>
-                            <p>{item.genero}</p>
+                            {/* <p>{item.sinopsis}</p> */}
+                            
+                            
+                            
                         </div>
                     )
 

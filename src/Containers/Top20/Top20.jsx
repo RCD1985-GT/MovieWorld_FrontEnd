@@ -15,7 +15,7 @@ const Top20 = () => {
     }, []);
 
 
-    // UseEffect de desmontaje
+    // UseEffect de actualizacion
     useEffect(() => {
 
     });
@@ -38,14 +38,13 @@ const Top20 = () => {
 
         return (
             <div className="contenidoTop20">
+                
                 {top20.map(item => {
 
                     return (
-                        <div className="item" key={item.id} >
-
-                            <p>{item.titulo}</p>
-                            <p>{item.año}</p>
-                            <p>{item.genero}</p>
+                        <div className="itemTop20" key={item.id} >
+                            <img src={item.poster} alt={item.id}/>
+                            <p>{item.titulo}</p>     
                         </div>
                     )
                 })

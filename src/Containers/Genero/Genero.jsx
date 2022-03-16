@@ -1,13 +1,14 @@
 
 // import React from 'react';
 // import { connect } from 'react-redux';
+// import axios from 'axios';
 
 
 // const Genero = (props) => {
 
-    // const traePelis = async () => {
+//     const traeGenero = async () => {
         
-    // const [peliculas, setPeliculas] = useState([])
+//     const [peliculas, setPeliculas] = useState([])
 
 //             try {
 

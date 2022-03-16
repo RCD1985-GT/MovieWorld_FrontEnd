@@ -10,6 +10,7 @@ import Novedades from './Containers/Novedades/Novedades';
 import Registro from './Containers/Registro/Registro';
 import Acceso from './Containers/Acceso/Acceso';
 import Genero from './Containers/Genero/Genero';
+import DetallesPelicula from './Containers/DetallesPelicula/DetallesPelicula';
 
 
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/registro" element={<Registro/>}/>
         <Route path="/acceso" element={<Acceso/>}/>
         <Route path="/genero" element={<Genero/>}/>
+        <Route path="/detalles" element={<DetallesPelicula/>}/>
 
 
         </Routes>
