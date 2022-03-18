@@ -18,7 +18,8 @@
 }
 
 .logo {
-    background-color: #5effc3;
+    background: rgb(200,255,235);
+    background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
     display: flex;
     justify-content: center;
     align-items: center;

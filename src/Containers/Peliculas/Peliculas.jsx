@@ -73,7 +73,7 @@ const Peliculas = (props) => {
 
                         <div className="itemPeliculas" key={item.id} onClick={()=>escogePelicula(item)} >
                             <img src={item.poster} alt={item.id}/>
-                            <p>{item.titulo}</p>
+                            <p className="titulo">{item.titulo}</p>
                         </div>
                     )
 

@@ -67,7 +67,7 @@ const Novedades = (props) => {
                     return (
                         <div className="itemNovedades" key={item.id} >
                             <img src={item.poster} alt={item.id}/>
-                            <p>{item.titulo}</p>
+                            <p className="titulo">{item.titulo}</p>
                         </div>
                     )
                 })

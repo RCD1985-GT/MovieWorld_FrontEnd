@@ -11,6 +11,7 @@ import Registro from './Containers/Registro/Registro';
 import Acceso from './Containers/Acceso/Acceso';
 import Genero from './Containers/Genero/Genero';
 import DetallesPelicula from './Containers/DetallesPelicula/DetallesPelicula';
+import Pedido from './Containers/Pedido/Pedido';
 
 
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/acceso" element={<Acceso/>}/>
         <Route path="/:genero" element={<Genero/>}/>
         <Route path="/detallesPelicula" element={<DetallesPelicula/>}/>
+        <Route path="/pedido" element={<Pedido/>}/>
 
 
         </Routes>

@@ -66,7 +66,7 @@ const Top20 = (props) => {
                     return (
                         <div className="itemTop20" key={item.id} onClick={()=>escogePelicula(item)}>
                             <img src={item.poster} alt={item.id}/>
-                            <p>{item.titulo}</p>     
+                            <p className="titulo">{item.titulo}</p>     
                         </div>
                     )
                 })
