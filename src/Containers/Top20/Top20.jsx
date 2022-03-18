@@ -17,7 +17,6 @@ const Top20 = () => {
 
     // UseEffect de actualizacion
     useEffect(() => {
-
     });
 
     // Funcion traer peliculas
@@ -26,7 +25,7 @@ const Top20 = () => {
 
         try {
             let resultado = await axios.get("http://localhost:3300/peliculas/top20");
-            console.log(resultado)
+            console.log("el array esta vacio")
             setTop20(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
 
         } catch (error) {

@@ -32,8 +32,8 @@ function App() {
         <Route path="/novedades" element={<Novedades/>}/>
         <Route path="/registro" element={<Registro/>}/>
         <Route path="/acceso" element={<Acceso/>}/>
-        <Route path="/genero" element={<Genero/>}/>
-        <Route path="/detalles" element={<DetallesPelicula/>}/>
+        <Route path="/:genero" element={<Genero/>}/>
+        <Route path="/detallesPelicula" element={<DetallesPelicula/>}/>
 
 
         </Routes>

@@ -26,7 +26,7 @@ const Novedades = () => {
 
         try {
             let resultado = await axios.get("http://localhost:3300/peliculas/novedades");
-            console.log(resultado)
+            console.log("el array esta vacio")
             setNovedades(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
 
         } catch (error) {
@@ -44,9 +44,6 @@ const Novedades = () => {
                         <div className="itemNovedades" key={item.id} >
                             <img src={item.poster} alt={item.id}/>
                             <p>{item.titulo}</p>
-                            {/* <p>{item.año}</p>
-                            <p>{item.genero}</p> */}
-                          
                         </div>
                     )
                 })

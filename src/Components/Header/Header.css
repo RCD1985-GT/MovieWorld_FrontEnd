@@ -18,21 +18,25 @@
 }
 
 .logo {
-    background-color: black;
+    background-color: #5effc3;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 3em;
     width: 7em;
     border-radius: 1em;
-    border: 5px solid lightgreen;
-    color: lightgreen;
+    border: 2px solid white;
+    color: #000000;
     cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 600;
 }
 
 
 .secciones {
-    background-color: lightgreen;
+    background: rgb(200,255,235);
+    background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
+    display: flex;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -40,8 +44,9 @@
     width: 25em;
     border-radius: 1em;
     cursor: pointer;
-    border: 5px solid whitesmoke;
+    border: 2px solid whitesmoke;
     margin-right: 35em;
+    
    }
 
 .textoSecciones {
@@ -53,7 +58,8 @@
 }
 
 .entrar {
-    background-color: lightgreen;
+    background: rgb(200,255,235);
+    background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -61,7 +67,7 @@
     width: 15em;
     border-radius: 1em;
     cursor: pointer;
-    border: 5px solid whitesmoke;
+    border: 2px solid whitesmoke;
 }
 
 .registro {

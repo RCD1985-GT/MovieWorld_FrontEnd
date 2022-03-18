@@ -1,23 +1,34 @@
 import React, { useState, useEffect } from "react";
 import './Peliculas.css';
 import axios from 'axios';
-import DetallesPelicula from "../DetallesPelicula/DetallesPelicula";
 import {useNavigate} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { DETALLES_PELICULA } from '../../redux/types';
 
 
 
-const Peliculas = () => {
+const Peliculas = (props) => {
 
 
     // Navegar
-
     let navigate = useNavigate();
 
-	const navegar = () => {
-		navigate("/detalles");
+    const navegar = () => {
+       	navigate("/detalles");
     }
 
+    // Funcion escoger pelicula
+    const escogePelicula = (pelicula) => {
+        
+        console.log(pelicula);
+        //Guardamos la pelicula escogida en redux
+        props.dispatch({type:DETALLES_PELICULA, payload: pelicula});
 
+
+        //Redirigimos a detalles Pelicula con navigate
+        navigate("/detallesPelicula"); // cambiar
+    }
+ 
     // Hook
     const [peliculas, setPeliculas] = useState([]);
 
@@ -41,7 +52,7 @@ const Peliculas = () => {
         try {
 
             let resultado = await axios.get("http://localhost:3300/peliculas");
-
+            console.log(resultado)
             setPeliculas(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
 
 
@@ -61,7 +72,7 @@ const Peliculas = () => {
 
                     return (
 
-                        <div className="itemPeliculas" key={item.id} onClick={()=>navegar("/detalles")} >
+                        <div className="itemPeliculas" key={item.id} onClick={()=>escogePelicula(item)} >
                             <img src={item.poster} alt={item.id}/>
                             <p>{item.titulo}</p>
                             {/* <p>{item.sinopsis}</p> */}
@@ -97,4 +108,4 @@ const Peliculas = () => {
 
 };
 
-export default Peliculas;
+export default connect()(Peliculas);

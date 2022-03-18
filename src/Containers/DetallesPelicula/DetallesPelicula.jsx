@@ -1,43 +1,72 @@
 import React from 'react';
 import './DetallesPelicula.css';
+// import axios from 'axios'; // ya no hace falta pq tengo los datos en redux
+import { useState, useEffect } from "react";
+import { connect } from 'react-redux';
 
 
 
 
-const DetallesPelicula = () => {
+const DetallesPelicula = (props) => {
+	
+// YA TENGO LOS DATOS EN REDUX ASI QUE PASO DIRECTAMENTE AL RETURN LINEA 45
 
-  // Navegar
+ /* Navegar
 
-  
-  // Hook
-  
-
-
-  // UseEffect de montaje
-  
+  Hook
+  const [peliculas, setPeliculas] = useState([]);
 
 
-  // UseEffect de desmontaje
-  
+  UseEffect de montaje // YA NO NECISTO XQ DATOS ESTAN EN REDUX
+  useEffect(() => {
+	traePeliculas();
+	}, []);
 
 
+ Funcion traer peliculas
 
+ const traePeliculas = async () => {..YA NO LA NECESITO XQ LOS DATOS LOS RECIBO DE REDUX
 
-	return (
+	try {
 
-		<div className="diseñoPeliculas">
+		let resultado = await axios.get("http://localhost:3300/peliculas");
 
-			<div className="infoIzquierda">AQUI VA EL POSTER</div>
+		setPeliculas(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
+		console.log("ha traido y guardado las pelis")
 
-			<div className="infoDerecha">
+	} catch (error) {
+		console.log(error);
+	}
+}
 
-				{/* <div className="datosPelicula">{props.titulo}</div> */}
+if (peliculas[0]?.id != undefined) {
+	aqui mapeo porque ya las tengo*/
+
+	return(
+
+		<div className="diseñoDetalles">
+
+			<div className="contenidoDetalles">
+
+				<div className="infoIzquierda"> 
+					<img className="cartel" src={props.peliculaSeleccionada.poster} alt={props.peliculaSeleccionada.titulo}/>
+				</div> 
+			
+
+				<div className="infoDerecha"> 
+					<div className="datosPeliculaTitulo">{props.peliculaSeleccionada?.titulo}</div>
+					<div className="datosPeliculaSinopsis">{props.peliculaSeleccionada?.sinopsis}</div>
+				</div>	
 
 			</div>
+
 		</div>
-	);
+		
+
+	) 
 };
 
-
-export default DetallesPelicula;
+export default connect((state) => ({
+    peliculaSeleccionada: state.peliculaSeleccionada
+}))(DetallesPelicula);
 
