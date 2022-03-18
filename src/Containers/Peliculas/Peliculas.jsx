@@ -16,19 +16,7 @@ const Peliculas = (props) => {
     const navegar = () => {
        	navigate("/detalles");
     }
-
-    // Funcion escoger pelicula
-    const escogePelicula = (pelicula) => {
-        
-        console.log(pelicula);
-        //Guardamos la pelicula escogida en redux
-        props.dispatch({type:DETALLES_PELICULA, payload: pelicula});
-
-
-        //Redirigimos a detalles Pelicula con navigate
-        navigate("/detallesPelicula"); // cambiar
-    }
- 
+  
     // Hook
     const [peliculas, setPeliculas] = useState([]);
 
@@ -41,9 +29,20 @@ const Peliculas = (props) => {
 
     // UseEffect de desmontaje
     useEffect(() => {
-
     });
 
+
+    // Funcion escoger pelicula
+    const escogePelicula = (pelicula) => {
+            
+        console.log(pelicula);
+        //Guardamos la pelicula escogida en REDUX al escoger la pelicula
+        props.dispatch({type:DETALLES_PELICULA, payload: pelicula});
+
+
+        //Redirigimos a la vista de detalles Pelicula con navigate
+        navigate("/detallesPelicula"); 
+    }
 
     // Funcion traer peliculas
 
@@ -52,7 +51,7 @@ const Peliculas = (props) => {
         try {
 
             let resultado = await axios.get("http://localhost:3300/peliculas");
-            console.log(resultado)
+            console.log(resultado);
             setPeliculas(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
 
 
@@ -75,10 +74,6 @@ const Peliculas = (props) => {
                         <div className="itemPeliculas" key={item.id} onClick={()=>escogePelicula(item)} >
                             <img src={item.poster} alt={item.id}/>
                             <p>{item.titulo}</p>
-                            {/* <p>{item.sinopsis}</p> */}
-                            
-                            
-                            
                         </div>
                     )
 
@@ -104,7 +99,6 @@ const Peliculas = (props) => {
             </div>
         );
     }
-
 
 };
 

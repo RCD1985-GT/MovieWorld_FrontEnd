@@ -1,7 +1,7 @@
 import React from 'react';
 import './DetallesPelicula.css';
 // import axios from 'axios'; // ya no hace falta pq tengo los datos en redux
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { connect } from 'react-redux';
 
 

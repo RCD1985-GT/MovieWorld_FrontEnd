@@ -6,7 +6,7 @@ const initialState = {
 
 const busquedaFilmsReducer = (state = initialState, action) => {
     switch(action.type){
-        //GUARDO EN EL ESTADO LOS DATOS DEL USUARIO LOGUEADO
+        //GUARDO EN EL ESTADO LOS DATOS DEL GENERO
         case GENERO :
             return action.payload;
 

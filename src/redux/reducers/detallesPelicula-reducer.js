@@ -7,7 +7,7 @@ const estadoInicial = {
 
 const seleccionPeliculaReducer = (state = estadoInicial, action) => {
     switch(action.type){
-        //GUARDO EN EL ESTADO LOS DATOS DEL USUARIO LOGUEADO
+        //GUARDO EN EL ESTADO LOS DATOS DE LAS PELICULAS
         case DETALLES_PELICULA :
             return action.payload; // muevo el contenido sin modificar
 

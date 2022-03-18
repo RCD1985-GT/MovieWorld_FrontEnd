@@ -4,7 +4,7 @@ import {combineReducers} from 'redux';
 
 import genero from './datosGenero-reducer';
 
-import peliculaSeleccionada from './detallesPelicula-recuder';
+import peliculaSeleccionada from './detallesPelicula-reducer';
 
 
 const rootReducer = combineReducers({
