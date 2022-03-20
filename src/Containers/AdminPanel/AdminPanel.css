@@ -1,0 +1,27 @@
+.diseñoAdminPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #060613;
+
+}
+
+
+.contenedorPanel {
+    height: 30em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dato1 {
+    background-color: lightgrey;
+    height: 20em;
+    width: 8em;
+
+}

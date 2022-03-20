@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 
-import './Acceso.css';
+import './Admin.css';
 
-const Login = () => {
+const LoginAdmin = () => {
 
     let navigate = useNavigate();
 
@@ -51,10 +51,10 @@ const Login = () => {
         //que entremos en bucles infinitos.
         // console.log("Credenciales vale....", credenciales);
 
-        if(credenciales?.token !== undefined){
+        if(datosUsuario?.password === "admin"){ // NO FUNCIONA
 
             setTimeout(()=>{
-                navigate("/");
+                navigate("/adminPanel"); // AQUI TIENE QUE LLEVAR AL PANEL DE ADMINISTRADOR (crear componente)
             }, 3000);
         };
 
@@ -100,18 +100,18 @@ const Login = () => {
 
     //2-Render (lo que pinta en pantalla)
 
-    if(credenciales?.token !== undefined){
+    if(datosUsuario?.password === "admin"){
         return(
-            <div>Hola {credenciales?.usuario?.nombre}, bienvenid@ a Movie World.</div>
+            <div>Hola {credenciales?.usuario?.nombre}, bienvenid@ a ADMINISTRACION Movie World.</div>
         )
     } else {
          
         return(
             
-            <div className='diseñoAcceso'>
-                 
-                <div className="diseñoFormulario">
-                <p>FORMULARIO USUARIO</p>
+            <div className='diseñoAccesoAdmin'>
+                 {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
+                <div className="diseñoFormularioAdmin">
+                <p>ACCESO ADMIN</p>
                     <input type="email" name="email" id="email" title="email" placeholder="Correo Electrónico" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="password" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e); checkPassword(e)}}/>
                     {msgError}
@@ -132,4 +132,4 @@ const Login = () => {
 };
 
 
-export default Login;
+export default LoginAdmin;

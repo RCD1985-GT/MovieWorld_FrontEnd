@@ -8,8 +8,10 @@ import peliculaSeleccionada from './detallesPelicula-reducer';
 
 import pedido from './datosPedido-reducer';
 
+import credenciales from './datosCredenciales-reducer';
+
 const rootReducer = combineReducers({
-    genero, peliculaSeleccionada, pedido
+    genero, peliculaSeleccionada, pedido, credenciales
 });
 
 export default rootReducer;

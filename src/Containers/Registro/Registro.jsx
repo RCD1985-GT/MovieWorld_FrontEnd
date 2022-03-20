@@ -5,7 +5,7 @@ import {checkError} from '../../utiles';
 import './Registro.css';
 
 
-const Registro = () => {  // cambiar a Registro?
+const Registro = () => {  
 
     let navigate = useNavigate();
     
@@ -27,12 +27,6 @@ const Registro = () => {  // cambiar a Registro?
         //se ejecuta cada vez que se actualiza CUALQUIER HOOK  
     })
 
-    // useEffect(()=>{
-    //     //useEffect observable que sólo se ejecutará cuando
-    //     //datosUsuario mute
-    // },
-    // [datosUsuario])
-    
 
     //Handler (manejador)
     const rellenarDatos = (e) => {

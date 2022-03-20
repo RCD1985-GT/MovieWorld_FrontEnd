@@ -1,12 +1,10 @@
 import React from 'react';
 import './Pedido.css';
+import { connect } from 'react-redux';
 
 
 
-const Pedido = () => {
-
-
-
+const Pedido = (props) => {
 
 
 	return(
@@ -14,9 +12,17 @@ const Pedido = () => {
 
 	  <div className="diseñoPedido">
 
-          <div className="contenedorPedido">PEDIDO
+          <div className="contenedorPedido">
+		
+			Hola,{props.credenciales.nombre} Gracias por alquilar {props.peliculaSeleccionada.titulo}
+			
           </div>
 	  </div>
 	);
   };
-export default Pedido;
+
+
+export default connect((state) => ({
+    peliculaSeleccionada: state.peliculaSeleccionada,
+	credenciales: state.credenciales  // NO ME TARE LAS CREDENCIALES
+}))(Pedido);

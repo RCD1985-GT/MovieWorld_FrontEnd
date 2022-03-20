@@ -76,8 +76,6 @@ const Peliculas = (props) => {
                             <p className="titulo">{item.titulo}</p>
                         </div>
                     )
-
-
                 })
                 }
 

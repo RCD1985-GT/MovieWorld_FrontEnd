@@ -34,7 +34,7 @@ const Home = (props) => {
                     <div className="bloque1Generos1" onClick={()=>navegar("/:genero","accion")}>ACCION</div>
                     <div className="bloque1Generos2" onClick={()=>navegar("/:genero","animacion")}>ANIMACION</div>
                     <div className="bloque1Generos3" onClick={()=>navegar("/:genero","belico")}>BELICO</div>
-                    <div className="bloque1Generos4" onClick={()=>navegar("/:genero","ciencia")}>CIENCIA FICCION</div>
+                    <div className="bloque1Generos4" onClick={()=>navegar("/:genero","ciencia")}>CIENCIA</div>
                 </div>
 
                 <div className="bloque2Generos">

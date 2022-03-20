@@ -37,6 +37,8 @@ return(
 			<div className="registro" onClick={()=>navegar("/registro")}>Registro</div> 
 			
 			<div className="acceso" onClick={()=>navegar("/acceso")} >Acceso</div>
+
+			<div className="admin" onClick={()=>navegar("/admin")} >Admin</div>
 			
 		</div>
 

@@ -12,6 +12,8 @@ import Acceso from './Containers/Acceso/Acceso';
 import Genero from './Containers/Genero/Genero';
 import DetallesPelicula from './Containers/DetallesPelicula/DetallesPelicula';
 import Pedido from './Containers/Pedido/Pedido';
+import Admin from './Containers/Admin/Admin';
+import AdminPanel from './Containers/AdminPanel/AdminPanel';
 
 
 
@@ -36,6 +38,9 @@ function App() {
         <Route path="/:genero" element={<Genero/>}/>
         <Route path="/detallesPelicula" element={<DetallesPelicula/>}/>
         <Route path="/pedido" element={<Pedido/>}/>
+        <Route path="/admin" element={<Admin/>}/>
+        <Route path="/adminPanel" element={<AdminPanel/>}/>
+
 
 
         </Routes>
