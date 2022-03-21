@@ -31,6 +31,7 @@ const Genero = (props) => {
     console.log(pelicula);
     //Guardamos la pelicula escogida en REDUX al escoger la pelicula
     props.dispatch({type:DETALLES_PELICULA, payload: pelicula});
+    console.log("peliculas guardadas en Redux")
 
 
     //Redirigimos a la vista de detalles Pelicula con navigate

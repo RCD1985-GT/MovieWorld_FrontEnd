@@ -1,6 +1,8 @@
 import React from 'react';
 import './AdminPanel.css';
-
+import { connect } from 'react-redux';
+import { PEDIDO } from '../../redux/types'; // NECESITO ESTO¿?
+import { DETALLES_PELICULA } from '../../redux/types';
 
 const AdminPanel = () => {
 
@@ -13,14 +15,12 @@ const AdminPanel = () => {
           
           <div className="contenedorPanel">
 
-                <div className="dato1">DATO 1</div>
-                <div className="dato1">DATO 2</div>
-                <div className="dato1">DATO 3</div>
-                <div className="dato1">DATO 4</div>
-                <div className="dato1">DATO 5</div>
-                <div className="dato1">DATO 6</div>
-                <div className="dato1">DATO 7</div>
-
+                <div className="dato">VER USUARIOS</div>
+                <div className="dato">BORRAR USUARIO</div>
+                <div className="dato">VER PELICULAS</div>
+                <div className="dato">AÑADIR PELICULA</div>
+                <div className="dato">VER PEDIDOS</div>
+            
 
           </div>
 
@@ -31,6 +31,15 @@ const AdminPanel = () => {
 	);
   };
 
+// QUE VOY A NECESITAR:
+//-que conecte a Redux.... import { connect } from 'react-redux'; + connect() dentro de export default
+// const AdminPanel = (props) => {...añado props
 
 
-export default AdminPanel;
+export default connect() (AdminPanel);
+
+// export default connect((state) => ({
+//     peliculaSeleccionada: state.peliculaSeleccionada,
+//     pedido: state.pedido,
+// 	  credenciales: state.credenciales  // NO ME TRAE LAS CREDENCIALES
+// }))(AdminPanel);

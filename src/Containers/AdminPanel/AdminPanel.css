@@ -6,9 +6,7 @@
     height: 100%;
     width: 100%;
     background-color: #060613;
-
 }
-
 
 .contenedorPanel {
     height: 30em;
@@ -19,9 +17,13 @@
     justify-content: space-around;
 }
 
-.dato1 {
+.dato {
     background-color: lightgrey;
-    height: 20em;
-    width: 8em;
-
+    height: 5em;
+    width: 18em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
 }

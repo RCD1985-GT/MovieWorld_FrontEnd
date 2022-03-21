@@ -8,12 +8,12 @@ import { DETALLES_PELICULA } from '../../redux/types';
 
 const Top20 = (props) => {
 
-   // Navegar
-  let navigate = useNavigate();
+    // Navegar
+    let navigate = useNavigate();
 
-  const navegar = () => {
+    const navegar = () => {
          navigate("/detalles");
-  }
+    }
 
     // Hook
     const [top20, setTop20] = useState([]);
@@ -30,8 +30,8 @@ const Top20 = (props) => {
     });
 
 
- // Funcion escoger pelicula
- const escogePelicula = (pelicula) => {
+    // Funcion escoger pelicula
+    const escogePelicula = (pelicula) => {
             
     console.log(pelicula);
     //Guardamos la pelicula escogida en REDUX al escoger la pelicula

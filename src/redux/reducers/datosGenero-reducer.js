@@ -4,7 +4,7 @@ const initialState = {
     genero: ""
 };
 
-const busquedaFilmsReducer = (state = initialState, action) => {
+const busquedaGeneroReducer = (state = initialState, action) => {
     switch(action.type){
         //GUARDO EN EL ESTADO LOS DATOS DEL GENERO
         case GENERO :
@@ -15,4 +15,4 @@ const busquedaFilmsReducer = (state = initialState, action) => {
     }
 }
 
-export default busquedaFilmsReducer;
+export default busquedaGeneroReducer;
