@@ -11,9 +11,10 @@ import Registro from './Containers/Registro/Registro';
 import Acceso from './Containers/Acceso/Acceso';
 import Genero from './Containers/Genero/Genero';
 import DetallesPelicula from './Containers/DetallesPelicula/DetallesPelicula';
-import Pedido from './Containers/Pedido/Pedido';
 import Admin from './Containers/Admin/Admin';
 import AdminPanel from './Containers/AdminPanel/AdminPanel';
+import AdminVerUsuarios from './Containers/AdminVerUsuarios/AdminVerUsuarios';
+import AdminVerPedidos from './Containers/AdminVerPedidos/AdminVerPedidos';
 
 
 
@@ -22,10 +23,7 @@ function App() {
   return (
     <div className="App">
     
-    
-
       <BrowserRouter>
-
       <Header/>
 
         <Routes>
@@ -37,12 +35,10 @@ function App() {
         <Route path="/acceso" element={<Acceso/>}/>
         <Route path="/:genero" element={<Genero/>}/>
         <Route path="/detallesPelicula" element={<DetallesPelicula/>}/>
-        <Route path="/pedido" element={<Pedido/>}/>
         <Route path="/admin" element={<Admin/>}/>
         <Route path="/adminPanel" element={<AdminPanel/>}/>
-
-
-
+        <Route path="/adminVerUsuarios" element={<AdminVerUsuarios/>}/>
+        {/* <Route path="/adminVerPedidos" element={<AdminVerPedidos/>}/> */}
         </Routes>
 
         <Footer/>

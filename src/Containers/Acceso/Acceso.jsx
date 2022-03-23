@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
-
+import { CREDENCIALES } from '../../redux/types';
+import { connect } from 'react-redux';
 import './Acceso.css';
 
-const Login = () => {
+
+const Login = (props) => {
 
     let navigate = useNavigate();
 
@@ -51,6 +52,8 @@ const Login = () => {
         //que entremos en bucles infinitos.
         // console.log("Credenciales vale....", credenciales);
 
+
+
         if(credenciales?.token !== undefined){
 
             setTimeout(()=>{
@@ -73,12 +76,15 @@ const Login = () => {
 
             let resultado = await axios.post("http://localhost:3300/usuarios/login",body); 
 
+
             
             if(resultado.data === "Usuario o contraseña inválido"){
                 setMsgError2("Usuario o contraseña inválido")
             }else{
-
+                
+                props.dispatch({type:CREDENCIALES, payload: resultado.data});
                 setCredenciales(resultado.data);
+                
             }
 
 
@@ -132,4 +138,9 @@ const Login = () => {
 };
 
 
-export default Login;
+// export default Login;
+
+export default connect((state) => ({
+    peliculaSeleccionada: state.peliculaSeleccionada,
+	credenciales: state.credenciales
+}))(Login);

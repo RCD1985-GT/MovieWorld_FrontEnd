@@ -9,15 +9,13 @@ const LoginAdmin = () => {
 
     let navigate = useNavigate();
 
-    
-   
-    //1-Hooks 
+    // Hooks 
     const [credenciales, setCredenciales] = useState("");
     const [datosUsuario, setDatosUsuario] = useState({email: "", password: ""});
     const [msgError, setMsgError] = useState("");
     const [msgError2, setMsgError2] = useState("");
 
-    //Funciones handlers
+    // Funciones handlers
     const rellenarDatos = (e) => {
         //Funcion handler que setea los datos en el hook...[e.target.name] obtiene 
         //el nombre de la propiedad a cambiar, e.target.value tiene el valor..ambos
@@ -25,6 +23,7 @@ const LoginAdmin = () => {
         setDatosUsuario({...datosUsuario, [e.target.name]: e.target.value})
     };
 
+    // Funcion chequea password
     const checkPassword = (e) => {
 
         if(e.target.value.length < 4){
@@ -35,32 +34,24 @@ const LoginAdmin = () => {
 
     };
 
-    
     // UseEffect de montaje
     //    (()=>{
-    //     console.log("Me he montado por primera y única vez");
     // },[]);
 
 
     // UseEffect de actualizacion
     useEffect(()=>{
-        //Este useEffect se ejecutará por cada vez que se actualize el 
-        //componente. Es decir, cuando cambie un hook y por lo tanto se actualize el componente.
+       
+        if(datosUsuario?.password === "admin"){ 
 
-        //Es peligroso cambiar hooks aqui, si no tenemos condicionales que eviten
-        //que entremos en bucles infinitos.
-        // console.log("Credenciales vale....", credenciales);
-
-        if(datosUsuario?.password === "admin"){ // NO FUNCIONA
-
-            setTimeout(()=>{
-                navigate("/adminPanel"); // AQUI TIENE QUE LLEVAR AL PANEL DE ADMINISTRADOR (crear componente)
-            }, 3000);
+            // setTimeout(()=>{
+            //     navigate("/adminPanel"); // AQUI TIENE QUE LLEVAR AL PANEL DE ADMINISTRADOR (crear componente)
+            // }, 3000);
         };
 
     });
 
-    //Funciones locales
+    //Funciones Login
 
     const login = async () => {
 
@@ -91,20 +82,12 @@ const LoginAdmin = () => {
         
     };
 
-    const takeMeRegister = () => {
-        setTimeout(()=>{
-            navigate("/registro");
-        },1000);
-    }
-
-
-    //2-Render (lo que pinta en pantalla)
-
+    
     if(datosUsuario?.password === "admin"){
-        return(
-            <div>Hola {credenciales?.usuario?.nombre}, bienvenid@ a ADMINISTRACION Movie World.</div>
-        )
-    } else {
+    //     return(
+    //         <div>Hola {credenciales?.usuario?.nombre}, bienvenid@ a ADMINISTRACION Movie World.</div>
+    //     )
+    // } else {
          
         return(
             
