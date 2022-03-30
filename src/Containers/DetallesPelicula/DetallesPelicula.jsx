@@ -2,39 +2,72 @@ import React from 'react';
 import './DetallesPelicula.css';
 import axios from 'axios'; 
 import { connect } from 'react-redux';
+import { useState, useEffect } from "react";
 
 const DetallesPelicula = (props) => {
 	
 // YA TENGO LOS DATOS EN REDUX ASI QUE PASO DIRECTAMENTE AL RETURN 
 
-  const hacerPedido = async () => {
+// Hook
+const [alquilada, setAlquilada] = useState(false);
 
-	// console.log(props.credenciales.token,"hhahahahahhahaha");
+// UseEffect de montaje
+// useEffect(() => {
+	
+// }, []);
+
+// UseEffect de actualizacion
+useEffect(() => {
+	console.log(props.credenciales);
+});
+
+
+const hacerPedido = async () => {
+
+	console.log(props.credenciales.token);
 
 	let body = {
 		peliculaId : props.peliculaSeleccionada?.id,
-		usuarioId : props.credenciales?.usuarioId,
+		usuarioId : props.credenciales?.usuario.id, 
 		precio : "5",
 		fechaAlquiler : "2022-03-24",
 		fechaDevolucion :  "2022-03-25"
 	   }
 
-    let config = {
-	headers: { Authorization: `Bearer ${props.credenciales.token}` }
-	};
+    // let config = {
+	// headers: { Authorization: `Bearer ${props.credenciales.token}` }
+	// };
 
 	try {
-
-		let resultado = await axios.post("http://localhost:3300/pedidos/nuevoPedido", body, config); 
+		console.log(body);
+		let resultado = await axios.post("http://localhost:3300/pedidos/nuevoPedido", body); 
 		console.log(resultado);
+		setAlquilada(true);
 		
 	} catch (error) {
 		console.log(error);
 	}
-
 }
+
+if(alquilada === true){
+// if (props.peliculaSeleccionada != undefined) {
+
 	return(
 
+	<div className="diseñoPedidos">
+	
+		<div className="contenedorPedidos">
+
+		Gracias por alquilar {props.peliculaSeleccionada?.titulo}
+			
+		</div>
+	</div>
+	
+);
+	
+	} else {   
+
+		return (
 		<div className="diseñoDetalles">
 			<div className="contenidoDetalles">
 				<div className="infoIzquierda"> 
@@ -48,22 +81,9 @@ const DetallesPelicula = (props) => {
 				</div>	
 			</div>
 		</div>
-	)
-
-
-	return(
+		)
+	}
 	
-		<div className="diseñoPedidos">
-  
-			<div className="contenedorPedidos">
-		  
-			 Gracias por alquilar {props.peliculaSeleccionada?.titulo}
-			  
-			</div>
-		</div>
-	  );
-
-
 };
 
 export default connect((state) => ({

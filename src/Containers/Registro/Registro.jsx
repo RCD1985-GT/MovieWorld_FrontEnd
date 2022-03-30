@@ -126,4 +126,4 @@ const Registro = () => {
 
 }
 
-export default Registro; // cambiar a Registro?
+export default Registro; 

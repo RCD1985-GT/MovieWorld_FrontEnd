@@ -3,14 +3,14 @@ import './AdminVerUsuarios.css';
 import axios from 'axios';
 import { connect } from 'react-redux';
 
-const AdminVerUsuarios = () => {
+const AdminVerUsuarios = (props) => {
 
     // Hook
     const [usuarios, setUsuarios] = useState([]);
 
     // UseEffect de montaje
     useEffect(() => {
-        traeUsuarios();
+        traeUsuarios(); // PORQUE ESTA LINEA DE AQUI¿?
     }, []);
 
     // UseEffect de actualizacion
@@ -68,5 +68,9 @@ const AdminVerUsuarios = () => {
         }
 };
 
-export default AdminVerUsuarios;
+
+export default connect((state) => ({
+    peliculaSeleccionada: state.peliculaSeleccionada,
+	credenciales: state.credenciales
+}))(AdminVerUsuarios);
 
