@@ -8,7 +8,7 @@ const createStoreWithMiddleware = applyMiddleware(
 
 const store = createStoreWithMiddleware(
     reducer,
-    load({ states: ['genero', 'peliculaSeleccionada', 'pedido', 'credenciales'] }),
+    load({ states: ['genero', 'peliculaSeleccionada',  'credenciales'] }),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__({
         trace: true,
     })

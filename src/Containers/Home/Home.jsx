@@ -15,8 +15,6 @@ const Home = (props) => {
         props.dispatch({type: GENERO, payload: criterio});
 
         navigate(lugar);
-       
-
     }
 
 

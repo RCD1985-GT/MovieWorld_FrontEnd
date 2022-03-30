@@ -10,7 +10,7 @@ const LoginAdmin = () => {
     let navigate = useNavigate();
 
     // Hooks 
-    const [credenciales, setCredenciales] = useState("");
+    // const [credenciales, setCredenciales] = useState("");
     const [datosUsuario, setDatosUsuario] = useState({email: "", password: ""});
     const [msgError, setMsgError] = useState("");
     const [msgError2, setMsgError2] = useState("");
@@ -35,25 +35,26 @@ const LoginAdmin = () => {
     };
 
     // UseEffect de montaje
+    // UseEffect de montaje
     //    (()=>{
     // },[]);
 
 
     // UseEffect de actualizacion
-    useEffect(()=>{
-       
-        if(datosUsuario?.password === "admin"){ 
+    // useEffect(()=>{
+    // });
 
-            // setTimeout(()=>{
-            //     navigate("/adminPanel"); // AQUI TIENE QUE LLEVAR AL PANEL DE ADMINISTRADOR (crear componente)
-            // }, 3000);
-        };
 
-    });
-
-    //Funciones Login
+    //Funcion Login
 
     const login = async () => {
+
+     if(datosUsuario?.password === "admin"){ 
+
+            setTimeout(()=>{
+                navigate("/adminPanel"); 
+            }, 1000);
+        };
 
         try {
 
@@ -65,11 +66,11 @@ const LoginAdmin = () => {
             let resultado = await axios.post("http://localhost:3300/usuarios/login",body); 
 
             
-            if(resultado.data === "Usuario o contraseña inválido"){
+            if(resultado.data === "Usuario o contraseña inválido"){ // mirar esta linea
                 setMsgError2("Usuario o contraseña inválido")
             }else{
 
-                setCredenciales(resultado.data);
+                // setCredenciales(resultado.data);
             }
 
 
@@ -78,18 +79,10 @@ const LoginAdmin = () => {
             console.log(error)
 
         }
+};
 
-        
-    };
 
-    
-    if(datosUsuario?.password === "admin"){
-    //     return(
-    //         <div>Hola {credenciales?.usuario?.nombre}, bienvenid@ a ADMINISTRACION Movie World.</div>
-    //     )
-    // } else {
-         
-        return(
+return(
             
             <div className='diseñoAccesoAdmin'>
                  {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
@@ -100,19 +93,10 @@ const LoginAdmin = () => {
                     {msgError}
                     {msgError2}
                     <button className='botonAcceder' onClick={()=>login()}>Acceder </button>
-                    <div className='botonNoRegistrado' onClick={()=>takeMeRegister()}>
-                    <u>¿ Aún no estas registrado ?</u>
-                    </div>
-                </div>
-                
-                
-                
+             </div>               
             </div>
         );
-    }
+    };
     
-
-};
-
 
 export default LoginAdmin;
