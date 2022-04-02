@@ -38,7 +38,7 @@ function App() {
         <Route path="/admin" element={<Admin/>}/>
         <Route path="/adminPanel" element={<AdminPanel/>}/>
         <Route path="/adminVerUsuarios" element={<AdminVerUsuarios/>}/>
-        {/* <Route path="/adminVerPedidos" element={<AdminVerPedidos/>}/> */}
+        <Route path="/adminVerPedidos" element={<AdminVerPedidos/>}/>
         </Routes>
 
         <Footer/>

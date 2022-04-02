@@ -4,24 +4,24 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 
 const AdminVerUsuarios = (props) => {
-console.log("entro en AdminVerUsuarios")
+    console.log("entro en AdminVerUsuarios")
     // Hook
     const [usuarios, setUsuarios] = useState([]);
 
     // UseEffect de montaje
     useEffect(() => {
-        traeUsuarios(); 
+        traeUsuarios();
     }, []);
 
     // UseEffect de actualizacion
     // useEffect(() => {
-        
+
     // });
 
     // Funcion traer usuarios
     const traeUsuarios = async () => {
-console.log("entro en funcion trae usuarios")
-      
+        console.log("entro en funcion trae usuarios")
+
         try {
             console.log("llamo a axios")
             let resultado = await axios.get("http://localhost:3300/usuarios");
@@ -34,8 +34,8 @@ console.log("entro en funcion trae usuarios")
         }
     }
 
-    if (usuarios[0]?.id != undefined) { // DONDE VA ESTE IF¿?
-        // aqui mapeo porque ya tengo los usuarios
+    if (usuarios[0]?.id != undefined) {
+        console.log("entro en mapeo")
 
         return (
             <div className="contenidoUsuarios">
@@ -43,32 +43,32 @@ console.log("entro en funcion trae usuarios")
                 {usuarios.map(usuario => {
 
                     return ( // COMPROBAR SI USUARIOS.ID VA EN SINGULAR O PLURAL
-                        <div className="itemUsuario" key={usuarios.id} > 
-                            <p className="usuario">{usuarios.nombre}</p>
-                            <p className="usuario">{usuarios.apellido}</p>
+                        <div className="itemUsuario" key={usuario.id} >
+                            <p className="usuario">{usuario.nombre}</p>
+                            <p className="usuario">{usuario.apellido}</p>
                             <p className="usuario">{usuario.email}</p>
                         </div>
                     )
                 })
-            }
+                }
 
             </div>
         )
 
-        } else {
-            return (
-                <div className="diseñoUsuarios">
-                    <div className="contenedorUsuarios">
+    } else {
+        return (
+            <div className="diseñoUsuarios">
+                <div className="contenedorUsuarios">
                     NO SE HA CARGADO LOS USUARIOS
-                    </div>
                 </div>
-            );
-        }
+            </div>
+        );
+    }
 };
 
 
 export default connect((state) => ({
     peliculaSeleccionada: state.peliculaSeleccionada,
-	credenciales: state.credenciales
+    credenciales: state.credenciales
 }))(AdminVerUsuarios);
 

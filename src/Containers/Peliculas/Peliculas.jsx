@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './Peliculas.css';
 import axios from 'axios';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { DETALLES_PELICULA } from '../../redux/types';
 
@@ -14,9 +14,9 @@ const Peliculas = (props) => {
     let navigate = useNavigate();
 
     const navegar = () => {
-       	navigate("/detalles");
+        navigate("/detalles");
     }
-  
+
     // Hook
     const [peliculas, setPeliculas] = useState([]);
 
@@ -34,14 +34,14 @@ const Peliculas = (props) => {
 
     // Funcion escoger pelicula
     const escogePelicula = (pelicula) => {
-            
+
         console.log(pelicula);
         //Guardamos la pelicula escogida en REDUX al escoger la pelicula
-        props.dispatch({type:DETALLES_PELICULA, payload: pelicula});
+        props.dispatch({ type: DETALLES_PELICULA, payload: pelicula });
 
 
         //Redirigimos a la vista de detalles Pelicula con navigate
-        navigate("/detallesPelicula"); 
+        navigate("/detallesPelicula");
     }
 
     // Funcion traer peliculas
@@ -71,8 +71,8 @@ const Peliculas = (props) => {
 
                     return (
 
-                        <div className="itemPeliculas" key={item.id} onClick={()=>escogePelicula(item)} >
-                            <img src={item.poster} alt={item.id}/>
+                        <div className="itemPeliculas" key={item.id} onClick={() => escogePelicula(item)} >
+                            <img src={item.poster} alt={item.id} />
                             <p className="titulo">{item.titulo}</p>
                         </div>
                     )

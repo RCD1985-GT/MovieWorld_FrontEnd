@@ -4,7 +4,7 @@ import {useNavigate} from 'react-router-dom';
 
 
 const AdminPanel = () => {
-
+console.log("entro en AdminPanel")
  // Navegar
  let navigate = useNavigate();
 

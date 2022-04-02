@@ -40,7 +40,7 @@ const Genero = (props) => {
 
     // Funcion que trae peliculas segun el genero  ....${props.genero}
     const traeGenero = async () => {
-        
+        console.log("entro enfuncion que trae genero")
             try {
 
             let resultado = await axios.get(`http://localhost:3300/peliculas/${props.genero}`); 
